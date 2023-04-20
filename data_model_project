@@ -27,7 +27,9 @@ class EntityWithMetadata(IdentifiableEntity):
     def __init__(self, id, label:str, title:str, creators:str) -> None:
         self.label = label
         self.title = title
-        self.creators = creators
+        self.creators = set()
+        for creator in creators:
+            self.creators.add(creator)
 
         super().__init__(id)
 
@@ -46,7 +48,9 @@ class Canvas(EntityWithMetadata):
 
 class Manifest(EntityWithMetadata):
     def __init__(self, id, items) -> None:
-        self.items = items
+        self.items = set()
+        for item in items:
+            self.items.add(item)
 
         super().__init__(id)
 
@@ -55,7 +59,9 @@ class Manifest(EntityWithMetadata):
 
 class Collection(EntityWithMetadata):
     def __init__(self, id, items) -> None:
-        self.items = items
+        self.items = set()
+        for item in items:
+            self.items.add(item)
 
         super().__init__(id)
 
