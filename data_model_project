@@ -40,7 +40,11 @@ class EntityWithMetadata(IdentifiableEntity):
         return self.title
 
     def getCreators(self) -> list[str]:
-        return self.creators
+        result = list()
+        for creator in self.creators:
+            result.append(creator)
+        result.sort()
+        return result 
 
 class Canvas(EntityWithMetadata):
     def __init__(self, id) -> None:
@@ -55,7 +59,11 @@ class Manifest(EntityWithMetadata):
         super().__init__(id)
 
     def getItems(self) -> list[Canvas]:
-        return self.items
+        result = list()
+        for item in self.items: 
+            result.append(item)
+        result.sort()
+        return result
 
 class Collection(EntityWithMetadata):
     def __init__(self, id, items) -> None:
@@ -66,4 +74,8 @@ class Collection(EntityWithMetadata):
         super().__init__(id)
 
     def getItems(self) -> list[Manifest]:
-        return self.items
+        result = list()
+        for item in self.items: 
+            result.append(item)
+        result.sort()
+        return result
