@@ -6,7 +6,7 @@ class Processor(object):
         return self.dbPathOrUrl
 
     def setDbPathOrUrl(self, dbPathOrUrl:str):
-        if self.dbPathOrUrl:
+        if self.dbPathOrUrl or (self.dbPathOrUrl == None):
             dbPathOrUrl = self.dbPathOrUrl
             return dbPathOrUrl
         
