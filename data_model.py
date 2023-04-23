@@ -1,3 +1,6 @@
+#Of course, this precise specification of the meaning of the return value of each method is not defined in the diagram itself, but it accompanies somehow the descriptive diagram as a natural language description of what the method should do. However, the diagram already provides the means of the kinds of input and the related output each method must to take and provide, respectively.
+
+
 class IdentifiableEntity(object):
     def __init__(self, id) -> None:
         self.id = id 
