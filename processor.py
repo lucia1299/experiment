@@ -10,4 +10,4 @@ class Processor(object):
             dbPathOrUrl = self.dbPathOrUrl
             return dbPathOrUrl
         
-    #if the self.dbpath exists, then the new dbpath is the one given as a parameter and it is assigned as the new dbpath
+#if the self.dbpath exists, then the new dbpath is the one given as a parameter and it is assigned as the new dbpath
